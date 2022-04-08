@@ -1,0 +1,15 @@
+name: Create Release
+
+jobs:
+  build-from-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: list files after checkout
+        run: |
+          pwd
+          ls -laR
+          echo "================================"
+          find .
+
