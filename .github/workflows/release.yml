@@ -1,5 +1,7 @@
 name: Create Release
 
+on: [ push ]
+
 jobs:
   build-from-source:
     runs-on: ubuntu-latest
