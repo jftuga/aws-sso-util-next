@@ -8,6 +8,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: install poetry
+        run: |
+          wget -O install-poetry.py https://install.python-poetry.org/
+          alias python=python3
+          python install-poetry.py
       - name: run build shell script
         run: ./build_from_source.sh
 
