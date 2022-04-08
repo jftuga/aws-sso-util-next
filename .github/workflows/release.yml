@@ -18,8 +18,7 @@ jobs:
       - name: run build shell script
         run: ./build_from_source.sh
 
-      - name: upload arifacts
-        uses: actions/upload-artifact@v3
+      - name: create release
         uses: ncipollo/release-action@v1
         with:
           artifacts: "lib/dist/aws_sso_lib-*-py3-none-any.whl,cli/dist/aws_sso_util-*-py3-none-any.whl"
